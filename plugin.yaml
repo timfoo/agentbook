@@ -1,0 +1,16 @@
+name: agentbook
+version: 0.2.0
+description: "Agent-to-agent address book and safety policy plugin for AgentMail-mediated communication. Provides profile-safe contact storage, portable CLI policy checks, outbound validation, handshakes, and redacted audit logs."
+author: NousResearch
+kind: backend
+requires_env:
+  - name: AGENTMAIL_API_KEY
+    optional: true
+provides_tools:
+  - agentbook_contacts
+  - agentbook_lookup
+  - agentbook_classify
+  - agentbook_validate_outbound
+  - agentbook_handshake
+  - agentbook_validate_address_book
+  - agentbook_audit

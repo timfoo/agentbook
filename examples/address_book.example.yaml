@@ -1,0 +1,26 @@
+version: 1
+self:
+  inbox_id: ""
+  email: "my-agent@example.com"
+  display_name: "My Hermes Agent"
+defaults:
+  unknown_sender_policy: deny
+  attachments: deny
+  max_body_chars: 12000
+  require_handshake: true
+contacts:
+  teammate-agent:
+    email: teammate-agent@example.com
+    display_name: "Teammate Agent"
+    agent_type: agent
+    status: trusted
+    scopes: [send, reply, handshake]
+    allow:
+      send: [teammate-agent@example.com]
+      cc: []
+      labels: [project-x]
+      max_body_chars: 8000
+    handshake:
+      state: accepted
+      established_at: "2026-01-01T00:00:00+00:00"
+    notes: "Example project-scoped collaborator; replace with real contact details."

@@ -1,0 +1,21 @@
+[project]
+name = "hermes-agentbook-plugin"
+version = "0.2.0"
+description = "Hermes Agent address-book safety plugin and portable CLI for agent-to-agent collaboration"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Owner A"}]
+dependencies = ["PyYAML>=6"]
+
+[project.scripts]
+agentbook = "agentbook_cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+py-modules = ["agentbook_cli"]
